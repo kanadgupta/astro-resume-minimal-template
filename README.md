@@ -1,12 +1,12 @@
 # Astro Resume Minimal Template
 
-A print-friendly resume template with GitHub Markdown-inspired styling. Built with [Astro](https://astro.build/) and styled primarily with [`github-markdown-css`](https://github.com/sindresorhus/github-markdown-css).
+A minimal print-friendly resume template with GitHub Markdown-inspired styling. Built with [Astro](https://astro.build/) and styled primarily with [`github-markdown-css`](https://github.com/sindresorhus/github-markdown-css) and [GitHub Octicons](https://primer.style/octicons/).
 
 ## Getting Started
 
 1. Check out the [Astro docs](https://docs.astro.build/en/install-and-setup/#prerequisites) for prerequisites (e.g., Node.js requirements)
 
-2. Edit the content in the `src/content` directory. See the collections defined in `src/content.config.ts` for the required frontmatter fields for the frontmatter files in `src/content/projects` and `src/content/work`.
+2. Edit the content in the `src/content` directory. The Zod schemas in `src/content.config.ts` describe the frontmatter for the Markdown files in `src/content/projects` and `src/content/work`.
 
 > [!NOTE]
 > The `src/content/projects` directory corresponds to the "Selected Projects" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by file name prior to rendering.
