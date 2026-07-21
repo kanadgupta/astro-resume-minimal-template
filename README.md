@@ -1,0 +1,51 @@
+# Astro Resume Minimal Template
+
+A print-friendly resume template with GitHub Markdown-inspired styling. Built with [Astro](https://astro.build/) and styled primarily with [`github-markdown-css`](https://github.com/sindresorhus/github-markdown-css).
+
+## Getting Started
+
+1. Check out the [Astro docs](https://docs.astro.build/en/install-and-setup/#prerequisites) for prerequisites (e.g., Node.js requirements)
+
+2. Edit the content in the `src/content` directory. See the collections defined in `src/content.config.ts` for the required frontmatter fields for the frontmatter files in `src/content/projects` and `src/content/work`.
+
+   > [!NOTE]
+   > The `src/content/projects` directory corresponds to the "Selected Projects" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by file name prior to rendering.
+   >
+   > The `src/content/work` directory corresponds to the "Experience" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by the `period` field in the frontmatter prior to rendering. The file name has **no** impact on how these files are rendered in the final output.
+
+3. Install the dependencies and run the development server to preview your content:
+
+```sh
+npm install
+npm run dev
+```
+
+4. That's it! All of the main markup and styling is in `src/pages/index.astro` — feel free to tweak it as you see fit.
+
+## Generating a PDF Export
+
+To generate a PDF export of your resume:
+
+1. (Optional, but recommended) Commit any changes so your branch is clean. The current commit SHA will be appended to the file name (e.g., `pdf-exports/resume-2026-07-06-3d5e64f.pdf`), so this is a good way to ensure that the file name corresponds to your actual changes.
+
+2. Serve the website at `localhost:4321` (either via the dev or build preview server)
+
+3. Run the following command:
+
+```
+npm run build:pdf
+```
+
+A new PDF will be created in the `pdf-exports` directory.
+
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
+| `npm run check`   | Check for formatting/type/etc. errors        |
