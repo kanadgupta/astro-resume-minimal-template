@@ -10,18 +10,6 @@
     "dev": "astro dev",
     "preview": "astro preview"
   },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "^24"
-    },
-    "packageManager": {
-      "name": "npm"
-    }
-  },
-  "engines": {
-    "node": "^24"
-  },
   "dependencies": {
     "@primer/octicons": "^19.21.2",
     "astro": "^7.1.3",
