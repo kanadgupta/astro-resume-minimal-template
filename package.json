@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "astro build",
-    "build:pdf": "playwright install && node bin/build-pdf.ts",
+    "build:pdf": "playwright install chromium && node bin/build-pdf.ts",
     "check": "astro check && prettier . --check",
     "dev": "astro dev",
     "preview": "astro preview"
