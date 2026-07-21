@@ -8,10 +8,10 @@ A print-friendly resume template with GitHub Markdown-inspired styling. Built wi
 
 2. Edit the content in the `src/content` directory. See the collections defined in `src/content.config.ts` for the required frontmatter fields for the frontmatter files in `src/content/projects` and `src/content/work`.
 
-   > [!NOTE]
-   > The `src/content/projects` directory corresponds to the "Selected Projects" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by file name prior to rendering.
-   >
-   > The `src/content/work` directory corresponds to the "Experience" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by the `period` field in the frontmatter prior to rendering. The file name has **no** impact on how these files are rendered in the final output.
+> [!NOTE]
+> The `src/content/projects` directory corresponds to the "Selected Projects" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by file name prior to rendering.
+>
+> The `src/content/work` directory corresponds to the "Experience" section of your resume. When Astro scans for Markdown files in this directory, the files are sorted by the `period` field in the frontmatter prior to rendering. The file name has **no** impact on how these files are rendered in the final output.
 
 3. Install the dependencies and run the development server to preview your content:
 
