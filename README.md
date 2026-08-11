@@ -2,6 +2,9 @@
 
 A minimal print-friendly resume template with GitHub Markdown-inspired styling. Built with [Astro](https://astro.build/) and styled primarily with [`github-markdown-css`](https://github.com/sindresorhus/github-markdown-css) and [GitHub Octicons](https://primer.style/octicons/).
 
+> [!IMPORTANT]
+> **Disclaimer:** The example resume shipped with this template is placeholder content built around a fictional character. This project is not affiliated with, endorsed by, or sponsored by the series or any of its respective rights holders, and the character's name is used here only to illustrate how the template renders. All employers, schools, dates, accomplishments, contact details, and links in the example are invented, and every placeholder URL and email address points at `example.com`. Replace all of it with your own information before publishing your resume.
+
 ## Getting Started
 
 1. Check out the [Astro docs](https://docs.astro.build/en/install-and-setup/#prerequisites) for prerequisites (e.g., Node.js requirements)
@@ -49,3 +52,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build`   | Build your production site to `./dist/`      |
 | `npm run preview` | Preview your build locally, before deploying |
 | `npm run check`   | Check for formatting/type/etc. errors        |
+
+## License
+
+[MIT](LICENSE)

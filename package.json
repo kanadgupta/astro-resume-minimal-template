@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "build": "astro build",
     "build:pdf": "playwright install chromium && node bin/build-pdf.ts",
