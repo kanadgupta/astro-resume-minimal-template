@@ -38,9 +38,11 @@ const work = (await getCollection('work'))
         <Info href={data.summary.location.href} iconName="location">{data.summary.location.title}</Info>
         <Info href=`tel:${data.summary.phone}` iconName="device-mobile">{data.summary.phone}</Info>
         <Info href=`mailto:${data.summary.email}` iconName="mail">{data.summary.email}</Info>
-        <Info href=`https://www.github.com/${data.summary.github}` iconName="mark-github">{data.summary.github}</Info>
-        <Info href=`https://www.linkedin.com/in/${data.summary.linkedin}` iconName="linkedin"
-          >{data.summary.linkedin}</Info
+        <Info href={data.summary.github || 'https://github.com'} iconName="mark-github"
+          >{data.summary.github || 'GitHub'}</Info
+        >
+        <Info href={data.summary.linkedin || 'https://linkedin.com'} iconName="linkedin"
+          >{data.summary.linkedin || 'LinkedIn'}</Info
         >
       </address>
     </header>
