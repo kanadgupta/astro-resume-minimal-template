@@ -35,15 +35,21 @@ const work = (await getCollection('work'))
       <h1>{data.summary.name}</h1>
 
       <address>
-        <Info href={data.summary.location.href} iconName="location">{data.summary.location.title}</Info>
-        <Info href=`tel:${data.summary.phone}` iconName="device-mobile">{data.summary.phone}</Info>
-        <Info href=`mailto:${data.summary.email}` iconName="mail">{data.summary.email}</Info>
-        <Info href={data.summary.github || 'https://github.com'} iconName="mark-github"
-          >{data.summary.github || 'GitHub'}</Info
-        >
-        <Info href={data.summary.linkedin || 'https://linkedin.com'} iconName="linkedin"
-          >{data.summary.linkedin || 'LinkedIn'}</Info
-        >
+        <Info href={data.summary.location.href} iconName="location">
+          {data.summary.location.title}
+        </Info>
+        <Info href=`tel:${data.summary.phone}` iconName="device-mobile">
+          {data.summary.phone}
+        </Info>
+        <Info href=`mailto:${data.summary.email}` iconName="mail">
+          {data.summary.email}
+        </Info>
+        <Info href={data.summary.github || 'https://github.com'} iconName="mark-github">
+          {data.summary.github || 'GitHub'}
+        </Info>
+        <Info href={data.summary.linkedin || 'https://linkedin.com'} iconName="linkedin">
+          {data.summary.linkedin || 'LinkedIn'}
+        </Info>
       </address>
     </header>
 
@@ -55,90 +61,82 @@ const work = (await getCollection('work'))
     <section class="resume__employment">
       <h2>Experience</h2>
       <dl>
-        {
-          work.map(job => (
-            <div class="employment__role">
-              {job.displayCompanyHeading && (
-                <h3>
-                  <span>{job.data.company}</span>
-                </h3>
-              )}
-              <dt>
-                <span>
-                  <strong>{job.data.title}</strong>
-                </span>
+        {work.map(job => (
+          <div class="employment__role">
+            {job.displayCompanyHeading && (
+              <h3>
+                <span>{job.data.company}</span>
+              </h3>
+            )}
+            <dt>
+              <span>
+                <strong>{job.data.title}</strong>
+              </span>
 
-                <span class="resume__period">
-                  <time>{job.data.period.raw}</time>
-                </span>
-              </dt>
-              <dd set:html={job.rendered?.html} />
-            </div>
-          ))
-        }
+              <span class="resume__period">
+                <time>{job.data.period.raw}</time>
+              </span>
+            </dt>
+            <dd set:html={job.rendered?.html} />
+          </div>
+        ))}
       </dl>
     </section>
 
     <section class="resume__skills">
       <h2>Skills</h2>
       <p>
-        {
-          data.skills.map(skill => (
-            <span class="skill__name">
-              <code>{skill}</code>
-            </span>
-          ))
-        }
+        {data.skills.map(skill => (
+          <span class="skill__name">
+            <code>{skill}</code>
+          </span>
+        ))}
       </p>
     </section>
 
     <section class="resume__projects">
       <h2>Selected Projects</h2>
       <dl>
-        {
-          projects.map(project => (
-            <div>
-              <dt>
-                <span>
-                  <Info href={project.data.link} iconName={project.data.icon}>
-                    <strong set:html={project.data.title} />
-                  </Info>
-                </span>
-              </dt>
-              <dd>
-                <div class="project__description" set:html={project.rendered?.html} />
-                {project.data.stack?.length ? (
-                  <p>
-                    {project.data.stack.map(skill => (
-                      <span class="skill__name">
-                        <code>{skill}</code>
-                      </span>
-                    ))}
-                  </p>
-                ) : null}
-              </dd>
-            </div>
-          ))
-        }
+        {projects.map(project => (
+          <div>
+            <dt>
+              <span>
+                <Info href={project.data.link} iconName={project.data.icon}>
+                  <strong set:html={project.data.title} />
+                </Info>
+              </span>
+            </dt>
+            <dd>
+              <div class="project__description" set:html={project.rendered?.html} />
+              {project.data.stack?.length ? (
+                <p>
+                  {project.data.stack.map(skill => (
+                    <span class="skill__name">
+                      <code>{skill}</code>
+                    </span>
+                  ))}
+                </p>
+              ) : null}
+            </dd>
+          </div>
+        ))}
       </dl>
     </section>
 
     <section class="resume__education">
       <h2>Education</h2>
       <ol>
-        {
-          data.education.map(schooling => (
-            <li>
-              <span>
-                <strong>{schooling.institution}</strong>,{' '}
-              </span>
-              <span>{schooling.description}</span>
-              <span class="resume__period">
-                {schooling.period[0]} - {schooling.period[1]}
-              </span>
-            </li>
-          ))
-        }
+        {data.education.map(schooling => (
+          <li>
+            <span>
+              <strong>{schooling.institution}</strong>,{' '}
+            </span>
+            <span>{schooling.description}</span>
+            <span class="resume__period">
+              {schooling.period[0]} - {schooling.period[1]}
+            </span>
+          </li>
+        ))}
       </ol>
     </section>
   </main>
@@ -296,6 +294,4 @@ const work = (await getCollection('work'))
       text-decoration: underline !important;
     }
   </style>
-
-
 </html>

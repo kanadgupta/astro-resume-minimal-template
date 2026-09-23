@@ -11,15 +11,14 @@ interface Props {
 const { href, iconName } = Astro.props;
 ---
 
-<a href={href}
-  ><div class="parent">
-    {
-      iconName === 'linkedin' ? (
-        <LinkedInIcon aria-hidden class="octicon info-component-icon linkedin" height={14} />
-      ) : (
-        <Fragment set:html={octicons[iconName].toSVG({ class: 'info-component-icon', height: 12 })} />
-      )
-    }<slot />
+<a href={href}>
+  <div class="parent">
+    {iconName === 'linkedin' ? (
+      <LinkedInIcon aria-hidden class="octicon info-component-icon linkedin" height={14} />
+    ) : (
+      <Fragment set:html={octicons[iconName].toSVG({ class: 'info-component-icon', height: 12 })} />
+    )}
+    <slot />
   </div>
 </a>
 

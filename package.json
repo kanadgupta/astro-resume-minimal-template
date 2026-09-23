@@ -22,7 +22,7 @@
     "@types/primer__octicons": "^19.21.0",
     "playwright": "^1.57.0",
     "prettier": "^3.7.4",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "^1.0.1",
     "typescript": "^6.0.3"
   }
 }
